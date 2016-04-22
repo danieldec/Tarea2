@@ -6,6 +6,10 @@ $(document).ready(function(){
     var emailF= document.getElementById('email').value;
     var password=$("#password").val();
     var password2=$("#password2").val();
+    if (nomF===""&&emailF===""&&password===""&&password2==="") {
+      alert("Por favor ingresa los datos")
+      return
+    }
     if(password==password2){
       alert("Registro Exitoso");
       nombreF=localStorage.setItem("nombreLE",nomF);
